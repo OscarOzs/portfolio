@@ -1,0 +1,49 @@
+---
+title: philosophers
+description: Philosophers is a project that implements the fundamentals of thread management within a process using C. It involves creating and managing threads, and explores the use of mutexes to prevent race conditions.
+date: "2022-02-25"
+repository: OscarOzs/philosophers
+published: true
+  
+---
+
+
+Demo of the project coming soon
+
+<u>**Philosophers**</u>
+
+42 School Project
+
+Philosophers is a project developed as part of the 42 School curriculum, following strict coding norms and requirements. The objective is to simulate the classic dining philosophers problem, emphasizing the implementation of thread management and synchronization using C.
+
+**Project Overview:**
+
+Coding Standards: The project must be coded in C, adhering to the 42 Norm. Any leaks, crashes, undefined behaviors, or norm errors will result in a failing grade.
+
+Simulation Setup: A number of philosophers are seated around a circular table, each engaging in one of three activities: eating, thinking, or sleeping. Philosophers do not perform multiple activities simultaneously.
+
+**Dining Rules:**
+
+Philosophers eat using two forks, one in each hand, as spaghetti cannot be consumed with a single fork.
+Philosophers must never starve; each philosopher needs to eat regularly.
+After eating, a philosopher will drop the forks and start sleeping. Once done sleeping, they will begin thinking.
+The simulation continues until a philosopher dies.
+Simulation Parameters:
+
+Number of Philosophers: This also determines the number of forks.
+Time to Die: The maximum time (in milliseconds) a philosopher can go without eating before dying.
+Time to Eat: The duration (in milliseconds) a philosopher spends eating, during which they hold onto both forks.
+Time to Sleep: The duration (in milliseconds) a philosopher spends sleeping.
+Number of Times Each Philosopher Must Eat: An optional parameter specifying how many times each philosopher must eat before the simulation stops. If not provided, the simulation only stops upon a philosopher's death.
+Behavior and Constraints:
+
+Each philosopher is assigned a unique number from 1 to number_of_philosophers.
+Philosophers are seated such that philosopher 1 is next to philosopher number_of_philosophers, and each philosopher N is seated between philosopher N-1 and philosopher N+1.
+Status updates for each philosopher (e.g., taking a fork, eating, sleeping, thinking, dying) must be timestamped and logged precisely, ensuring no interleaved or scrambled outputs.
+The simulation must detect and log a philosopher's death within 10 milliseconds of the event.
+Key Points:
+
+Philosophers do not communicate with each other.
+They remain unaware of another philosopher's imminent death.
+The program must handle threads efficiently, utilizing mutexes to prevent race conditions and ensure smooth simulation.
+This project provides a rigorous exercise in thread management, synchronization, and adherence to coding standards, offering valuable insights into concurrent programming in C.

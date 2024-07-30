@@ -1,0 +1,59 @@
+---
+title: ft_irc
+description: ft_irc is an IRC server implemented in C++ 98, designed to handle the creation and deletion of chat channels. It supports sending and receiving private messages, managing user roles, and executing various IRC commands. This project showcases fundamental concepts of network programming and concurrency control in C++.
+date: "2023-08-16"
+published: true
+repository: "WilliamsOz/irc"
+---
+
+
+Demo of the project coming soon
+
+**<u>ft_irc</u>**
+
+42 School Project
+
+The ft_irc server is built to comply with the IRC protocol, ensuring compatibility with standard IRC clients. The server allows users to authenticate, set nicknames, join channels, and communicate through private and public messages. Additionally, it supports user roles, distinguishing between basic users and operators, who have special privileges to manage channels and enforce rules.
+
+**Project Overview**
+
+Key Features
+Channel Management: Create and delete chat channels.
+Private Messaging: Send and receive private messages.
+User Roles: Implement basic users and operators with specific privileges.
+IRC Commands: Support essential IRC commands for channel management and user control.
+Basic Functionalities
+Using the Reference IRC Client:
+
+Authentication: Users must be able to log in to the server.
+Nickname and Username: Users should set their IRC identity.
+Join Channels: Users can join and participate in chat channels.
+Private Messaging: Users can send and receive messages privately.
+Channel Communication: Messages sent in a channel are broadcast to all members.
+Operator Commands
+Operators have special commands to manage the channel and enforce rules:
+
+KICK: Eject a client from a channel.
+
+INVITE: Invite a client to join a channel.
+
+TOPIC: Change or view the channel's topic.
+
+MODE: Modify the channel's mode settings:
+
+Invite-Only Mode (i): Only invited users can join.
+
+Topic Restriction (t): Only operators can change the topic.
+
+Channel Key (k): Set or remove a password for the channel.
+
+Operator Privileges (o): Grant or remove operator status.
+
+User Limit (l): Set or remove a limit on the number of users.
+
+**Important Guidelines**
+
+Communication: The server must use TCP/IP for communication.
+Compatibility: The server should operate seamlessly with the chosen reference IRC client.
+Reliability: Ensure the server adheres to the IRC protocol standards, minimizing errors and providing a reliable user experience.
+Simulation Stop Conditions: The simulation will stop if a philosopher dies or if all philosophers eat a specified number of times (optional parameter).

@@ -1,0 +1,41 @@
+---
+title: "Inception"
+description: Inception is a project to set up a mini-infrastructure of services using Docker Compose within a virtual machine. It includes containers for NGINX with TLS, WordPress with php-fpm, and MariaDB, each with custom Dockerfiles and built from Debian. Volumes are used for the WordPress database and site files, and a Docker network connects all containers.
+repository: OscarOzs/Inception
+date: "2023-05-17"
+published: true
+---
+
+**<u>Inception</u>**
+
+42 School Project
+
+The Inception project aims to set up a mini-infrastructure of various services within a virtual machine, adhering to specific rules. The entire setup must be done using Docker Compose.
+
+**Key Requirements:**
+
+Virtual Machine: All services must run within a virtual machine.
+
+Docker Compose: Mandatory use of Docker Compose for orchestration.
+
+Containerization: Each service must run in its dedicated Docker container.
+
+Images: Containers should be built from the penultimate stable versions of Alpine or Debian, using custom Dockerfiles.
+
+Dockerfiles: Each service must have its own Dockerfile, invoked by a Makefile in the docker-compose.yml file.
+
+**Services to Implement:**
+
+NGINX Container: Must support TLSv1.2 or TLSv1.3 only.
+
+WordPress Container: Includes WordPress with php-fpm, excluding NGINX.
+
+MariaDB Container: For database management, excluding NGINX.
+
+
+**Volumes:**
+
+One volume for the WordPress database.
+Another volume for WordPress site files.
+Docker Network: To connect all containers.
+Resilience: Containers must restart in case of a crash.
