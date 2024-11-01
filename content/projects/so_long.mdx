@@ -8,56 +8,45 @@ published: true
 
 Demo of the project coming soon
 
-**<u>so-long</u>**
+<span style={{ display: 'block', textAlign: 'center', fontSize: '34px' }}><u><i>**so-long**</i></u></span>
 
-42 School Project
+<span style={{ textAlign: 'center' }}>
+<strong>so-long</strong> is a 42 School Project that is a <strong>2D game</strong> developed in <strong>C</strong> using the <strong>MiniLibX</strong> library, an internal graphics library provided by 42.<br />
+The game challenges players to collect all items on the map and reach the exit using the shortest path possible.
+</span>
 
-so-long is a 2D game developed as part of the 42 School curriculum, coded in C and utilizing the MiniLibX library, an internal graphics library provided by 42. The game is designed to offer a challenging yet enjoyable experience where the player's goal is to collect all items on the map and escape using the shortest path possible.
+<hr style={{ border: '0.1px solid black' }} />
 
-**Project Overview**
+<br />
 
-<u>Gameplay Mechanics:</u>
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Project Overview**</span>
 
-Objective: The primary goal of the game is for the player to collect all items scattered across the map and then find the shortest path to the exit.
+- <span style={{ fontSize: '20px' }}><u>Gameplay Mechanics</u></span>
+  - **Objective**: The player’s main goal is to collect all items on the map and then find the shortest path to the exit.
+  - **Controls**: The player uses the W, A, S, and D keys to move up, down, left, and right.
+  - **Movement Restrictions**: Players cannot move through walls.
+  - **Move Counter**: The game displays the total number of moves in the shell.
 
-Controls: The player controls the main character using the W, A, S, and D keys. These keys allow movement in four directions: up, down, left, and right.
+- <span style={{ fontSize: '20px' }}><u>Graphics and View</u></span>
+  - **2D View**: The game uses a <strong>2D perspective</strong>, either top-down or side-view.
+  - **MiniLibX Library**: Built with the MiniLibX library, enabling the creation of graphics and smooth rendering.
 
-Movement Restrictions: Players cannot move through walls, ensuring they must navigate the map carefully to reach all items and the exit.
+---
 
-Move Counter: Every time the player makes a move, the total number of movements is displayed in the shell. This feature helps players track their progress and strive for efficiency.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Game Design and Theme**</span>
 
-<u>Graphics and View:</u>
+- **Customizable Universe**: Developers can create unique themes and universes for the game by simply editing a file.
 
-2D View: The game utilizes a 2D view, which can be either top-down or side profile. This perspective provides a clear and straightforward visual representation of the game environment.
+---
 
-MiniLibX Library: The game is built using the MiniLibX library, a simple yet powerful graphics library provided by 42. This library facilitates the creation of the game's graphical elements and ensures smooth rendering.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Technical Implementation**</span>
 
-<u>Game Design and Theme:</u>
+- <span style={{ fontSize: '20px' }}><u>C Programming</u></span>
+  - **Language**: Developed in C for efficiency and control over system resources.
+  - **MiniLibX Integration**: Utilizes MiniLibX for graphics rendering and input handling, suited for a 2D game with basic graphical needs.
 
-Customizable Universe: While example themes may include dolphins or other motifs, developers are encouraged to create their own unique game universes. This flexibility allows for creativity in designing the game's visual and thematic elements.
+- <span style={{ fontSize: '20px' }}><u>Game Features</u></span>
+  - **Item Collection**: Players must collect all items before accessing the exit.
+  - **Pathfinding**: The challenge involves finding the shortest, most efficient path to the exit after collecting items.
+  - **Move Display**: The game displays the player's move count in the shell, promoting optimal play.
 
-Non-Real-Time Play: The game is not required to operate in real-time, giving players the opportunity to plan their moves strategically without time pressure.
-
-Technical Implementation
-
-<u>C Programming:</u>
-
-Language: The game is coded in C, leveraging the language's efficiency and control over system resources to create a responsive gaming experience.
-
-MiniLibX Integration: MiniLibX is used for rendering graphics and handling user input, making it an ideal choice for developing a 2D game with basic graphical requirements.
-
-<u>Game Features:</u>
-
-Item Collection: Players must navigate the map to collect all items before they can proceed to the exit.
-
-Pathfinding: The challenge includes finding the shortest and most efficient path to the exit after collecting all items.
-
-Move Display: The game keeps track of and displays the total number of moves made by the player in the shell, encouraging optimal play.
-
-<u>User Experience:</u>
-
-Intuitive Controls: Simple controls ensure that players can easily navigate the game world.
-
-Visual Feedback: The 2D view and clear graphics provide immediate visual feedback on the player's actions and the game state.
-
-Engagement: The combination of item collection, pathfinding, and move tracking creates an engaging and replayable game experience.

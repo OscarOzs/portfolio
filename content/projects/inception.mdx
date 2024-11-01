@@ -6,36 +6,43 @@ date: "2023-05-17"
 published: true
 ---
 
-**<u>Inception</u>**
+<span style={{ display: 'block', textAlign: 'center', fontSize: '34px' }}><u><i>**Inception**</i></u></span>
 
-42 School Project
+<span style={{ textAlign: 'center' }}>
+<strong>Inception</strong> is a 42 School Project that aims to set up a <strong>mini-infrastructure</strong> of various services within a virtual machine, following specific requirements.<br />
+The entire setup is managed with <strong>Docker Compose</strong> to orchestrate containers and services.
+</span>
 
-The Inception project aims to set up a mini-infrastructure of various services within a virtual machine, adhering to specific rules. The entire setup must be done using Docker Compose.
+<hr style={{ border: '0.1px solid black' }} />
 
-**Key Requirements:**
+<br />
 
-Virtual Machine: All services must run within a virtual machine.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Project Overview**</span>
 
-Docker Compose: Mandatory use of Docker Compose for orchestration.
+- <span style={{ fontSize: '20px' }}><u>Key Requirements</u></span>
+  - **Virtual Machine**: All services must run within a virtual machine.
+  - **Docker Compose**: Mandatory use of Docker Compose for container orchestration.
+  - **Containerization**: Each service operates in a dedicated Docker container.
+  - **Images**: Containers are built from the penultimate stable versions of <strong>Alpine or Debian</strong>, using custom Dockerfiles.
+  - **Dockerfiles**: Each service requires its own Dockerfile, invoked via a <strong>Makefile</strong> in the `docker-compose.yml` file.
 
-Containerization: Each service must run in its dedicated Docker container.
+---
 
-Images: Containers should be built from the penultimate stable versions of Alpine or Debian, using custom Dockerfiles.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Services to Implement**</span>
 
-Dockerfiles: Each service must have its own Dockerfile, invoked by a Makefile in the docker-compose.yml file.
+- **NGINX Container**: Configured to support only <strong>TLSv1.2</strong> or <strong>TLSv1.3</strong>.
+- **WordPress Container**: Includes WordPress with <strong>php-fpm</strong>, excluding NGINX.
+- **MariaDB Container**: Manages the database, excluding NGINX.
 
-**Services to Implement:**
+---
 
-NGINX Container: Must support TLSv1.2 or TLSv1.3 only.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Infrastructure Details**</span>
 
-WordPress Container: Includes WordPress with php-fpm, excluding NGINX.
+- **Volumes**:
+  - A volume for the <strong>WordPress database</strong>.
+  - A volume for <strong>WordPress site files</strong>.
 
-MariaDB Container: For database management, excluding NGINX.
+- **Docker Network**: Used to connect all containers within the virtual machine.
+- **Resilience**: Containers must be configured to <strong>restart automatically</strong> in case of a crash.
 
-
-**Volumes:**
-
-One volume for the WordPress database.
-Another volume for WordPress site files.
-Docker Network: To connect all containers.
-Resilience: Containers must restart in case of a crash.
+This project provides hands-on experience in containerization, service orchestration, and infrastructure resilience, offering a foundational understanding of Docker and Docker Compose.

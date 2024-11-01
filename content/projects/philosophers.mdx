@@ -17,40 +17,58 @@ published: true
   Your browser does not support the video tag.
 </video>
 
-<u>**Philosophers**</u>
+<span style={{ display: 'block', textAlign: 'center', fontSize: '34px' }}><u><i>**Philosophers**</i></u></span>
 
-42 School Project
+<span style={{ textAlign: 'center' }}>
+Philosophers is a 42 School Project developed as part of the 42 School curriculum, adhering to <strong>strict coding norms</strong> and requirements.<br />
+The objective is to simulate the <strong>dining philosophers problem</strong>, focusing on <strong>thread management</strong> and synchronization using <strong>C</strong>.
+</span>
 
-Philosophers is a project developed as part of the 42 School curriculum, following strict coding norms and requirements. The objective is to simulate the classic dining philosophers problem, emphasizing the implementation of thread management and synchronization using C.
+<hr style={{ border: '0.1px solid black' }} />
 
-**Project Overview:**
+<br />
 
-Coding Standards: The project must be coded in C, adhering to the 42 Norm. Any leaks, crashes, undefined behaviors, or norm errors will result in a failing grade.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Project Overview**</span>
 
-Simulation Setup: A number of philosophers are seated around a circular table, each engaging in one of three activities: eating, thinking, or sleeping. Philosophers do not perform multiple activities simultaneously.
+- <span style={{ fontSize: '20px' }}><u>Coding Standards</u></span>
+  - **Language**: The project is coded in C and follows the <strong>42 Norm</strong>, with any leaks, crashes, undefined behaviors, or norm errors resulting in a failing grade.
 
-**Dining Rules:**
+- <span style={{ fontSize: '20px' }}><u>Simulation Setup</u></span>
+  - **Philosophers at a Table**: A number of philosophers are seated around a circular table, each performing one of three activities: eating, thinking, or sleeping. Each philosopher engages in only one activity at a time.
 
-Philosophers eat using two forks, one in each hand, as spaghetti cannot be consumed with a single fork.
-Philosophers must never starve; each philosopher needs to eat regularly.
-After eating, a philosopher will drop the forks and start sleeping. Once done sleeping, they will begin thinking.
-The simulation continues until a philosopher dies.
-Simulation Parameters:
+---
 
-Number of Philosophers: This also determines the number of forks.
-Time to Die: The maximum time (in milliseconds) a philosopher can go without eating before dying.
-Time to Eat: The duration (in milliseconds) a philosopher spends eating, during which they hold onto both forks.
-Time to Sleep: The duration (in milliseconds) a philosopher spends sleeping.
-Number of Times Each Philosopher Must Eat: An optional parameter specifying how many times each philosopher must eat before the simulation stops. If not provided, the simulation only stops upon a philosopher's death.
-Behavior and Constraints:
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Dining Rules**</span>
 
-Each philosopher is assigned a unique number from 1 to number_of_philosophers.
-Philosophers are seated such that philosopher 1 is next to philosopher number_of_philosophers, and each philosopher N is seated between philosopher N-1 and philosopher N+1.
-Status updates for each philosopher (e.g., taking a fork, eating, sleeping, thinking, dying) must be timestamped and logged precisely, ensuring no interleaved or scrambled outputs.
-The simulation must detect and log a philosopher's death within 10 milliseconds of the event.
-Key Points:
+- **Forks Requirement**: Each philosopher needs <strong>two</strong> forks to eat, one in each hand.
+- **Prevention of Starvation**: Philosophers must eat regularly to avoid starvation.
+- **Activity Cycle**: After eating, a philosopher will drop the forks and sleep, then start thinking when done.
+- **Simulation Duration**: The simulation runs until a philosopher dies.
 
-Philosophers do not communicate with each other.
-They remain unaware of another philosopher's imminent death.
-The program must handle threads efficiently, utilizing mutexes to prevent race conditions and ensure smooth simulation.
+---
+
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Simulation Parameters**</span>
+
+- **Number of Philosophers**: Determines the number of forks.
+- **Time to Die**: Maximum time <strong>(in ms)</strong> a philosopher can go without eating before dying.
+- **Time to Eat**: Duration <strong>(in ms)</strong> a philosopher spends eating while holding both forks.
+- **Time to Sleep**: Duration <strong>(in ms)</strong> a philosopher spends sleeping.
+- **Optional Parameter**: Specifies how many times each philosopher <strong>must eat</strong> before the simulation stops. If not provided, the simulation stops upon a philosopher's death.
+
+---
+
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Behavior and Constraints**</span>
+
+- **Philosopher Positioning**: Each philosopher is assigned a <strong>unique number</strong>, seated in a circular order.
+- **Status Updates**: Actions (e.g., taking a fork, eating, sleeping) are <strong>timestamped and logged precisely</strong>, with no interleaved outputs.
+- **Death Detection**: A philosopher's death must be detected and logged within <strong>10 milliseconds</strong> of the event.
+
+---
+
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Key Points**</span>
+
+- **Isolation**: Philosophers <strong>do not communicate</strong> and remain unaware of another’s death.
+- **Thread Management**: Efficient handling of threads, using <strong>mutexes</strong> to prevent <strong>race conditions</strong> and ensure smooth simulation.
+
 This project provides a rigorous exercise in thread management, synchronization, and adherence to coding standards, offering valuable insights into concurrent programming in C.
+

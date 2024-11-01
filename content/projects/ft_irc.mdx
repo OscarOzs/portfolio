@@ -16,51 +16,63 @@ repository: "WilliamsOz/irc"
   Your browser does not support the video tag.
 </video>
 
-**<u>ft_irc</u>**
+<span style={{ display: 'block', textAlign: 'center', fontSize: '34px' }}><u><i>**ft_irc**</i></u></span>
 
-42 School Project
+<span style={{ textAlign: 'center' }}>
+<strong>ft_irc</strong> is a 42 School <strong>C++</strong> Project that implements an <strong>IRC server</strong> compatible with standard IRC clients.<br />
+The server allows users to <strong>authenticate</strong>, set nicknames, <strong>join channels</strong>, and communicate through <strong>private and public messages</strong>.
+It also includes <strong>role-based permissions</strong>, with operators having special privileges to manage channels and enforce rules.
+</span>
 
-The ft_irc server is built to comply with the IRC protocol, ensuring compatibility with standard IRC clients. The server allows users to authenticate, set nicknames, join channels, and communicate through private and public messages. Additionally, it supports user roles, distinguishing between basic users and operators, who have special privileges to manage channels and enforce rules.
+<hr style={{ border: '0.1px solid black' }} />
 
-**Project Overview**
+<br />
 
-Key Features
-Channel Management: Create and delete chat channels.
-Private Messaging: Send and receive private messages.
-User Roles: Implement basic users and operators with specific privileges.
-IRC Commands: Support essential IRC commands for channel management and user control.
-Basic Functionalities
-Using the Reference IRC Client:
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Project Overview**</span>
 
-Authentication: Users must be able to log in to the server.
-Nickname and Username: Users should set their IRC identity.
-Join Channels: Users can join and participate in chat channels.
-Private Messaging: Users can send and receive messages privately.
-Channel Communication: Messages sent in a channel are broadcast to all members.
-Operator Commands
-Operators have special commands to manage the channel and enforce rules:
+- <span style={{ fontSize: '20px' }}><u>Key Features</u></span>
+  - **Channel Management**: Supports creating and deleting chat channels.
+  - **Private Messaging**: Allows users to send and receive private messages.
+  - **User Roles**: Differentiates between basic users and operators, each with specific privileges.
+  - **IRC Commands**: Implements essential <strong>IRC commands</strong> for managing channels and controlling user access.
 
-KICK: Eject a client from a channel.
+- <span style={{ fontSize: '20px' }}><u>Implemented Commands</u></span>
+  - **INVITE**: Invite a client to join a channel.
+  - **TOPIC**: Change or view the channel's topic.
+  - **MODE**: Modify channel settings (e.g., invite-only, topic restriction, user limit).
+  - **JOIN**: Join a chat channel.
+  - **KICK**: Eject a client from a channel.
+  - **PRIVMSG**: Send private messages to other users.
+  - **WHOIS**: Retrieve information about a specific user.
+  - **NICK**: Set or change the nickname of a user.
+  - **CAP**: Negotiate capabilities with the server.
+  - **PASS**: Provide a password for server authentication.
+  - **USER**: Register a new user to the server.
+  - **PING**: Check connectivity with the server.
+  - **PART**: Leave a chat channel.
+  - **QUIT**: Disconnect from the server.
+  - **WHO**: List information about users on the server.
 
-INVITE: Invite a client to join a channel.
+---
 
-TOPIC: Change or view the channel's topic.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Operator Commands**</span>
 
-MODE: Modify the channel's mode settings:
+- **KICK**: Ejects a client from a channel.
+- **INVITE**: Invites a client to join a channel.
+- **TOPIC**: Changes or views the channel's topic.
+- **MODE**: Modifies the channel's mode settings, with options including:
+  - **Invite-Only Mode (i)**: Only invited users can join.
+  - **Topic Restriction (t)**: Only operators can change the topic.
+  - **Channel Key (k)**: Sets or removes a password for the channel.
+  - **Operator Privileges (o)**: Grants or removes operator status.
+  - **User Limit (l)**: Sets or removes a user limit in the channel.
 
-Invite-Only Mode (i): Only invited users can join.
+---
 
-Topic Restriction (t): Only operators can change the topic.
+<span style={{ display: 'block', textAlign: 'center', fontSize: '28px' }}>**Important Guidelines**</span>
 
-Channel Key (k): Set or remove a password for the channel.
+- **Communication**: The server must use <strong>TCP/IP</strong> for communication.
+- **Compatibility**: The server should be fully compatible with the chosen IRC client. (<strong>irssi</strong> in the video)
+- **Reliability**: The server must adhere to <strong>IRC protocol standards</strong>, minimizing errors and providing a reliable experience.
 
-Operator Privileges (o): Grant or remove operator status.
-
-User Limit (l): Set or remove a limit on the number of users.
-
-**Important Guidelines**
-
-Communication: The server must use TCP/IP for communication.
-Compatibility: The server should operate seamlessly with the chosen reference IRC client.
-Reliability: Ensure the server adheres to the IRC protocol standards, minimizing errors and providing a reliable user experience.
-Simulation Stop Conditions: The simulation will stop if a philosopher dies or if all philosophers eat a specified number of times (optional parameter).
+This project focuses on implementing a reliable IRC server with role-based permissions, essential commands, and channel management, offering a foundational exercise in network communication and protocol adherence.
